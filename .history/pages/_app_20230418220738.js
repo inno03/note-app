@@ -1,7 +1,7 @@
 import React from "react"
 import Sidebar from "./components/Sidebar"
 import Editor from "./components/Editor"
-import { data } from "./lib/data"
+import { data } from "./data"
 import Split from "react-split"
 import {nanoid} from "nanoid"
 
@@ -27,6 +27,7 @@ export default function App() {
     }
     
     function updateNote(text) {
+        // Put the most recently-modified note at the top
         setNotes(oldNotes => {
             const newArray = []
             for(let i = 0; i < oldNotes.length; i++) {
